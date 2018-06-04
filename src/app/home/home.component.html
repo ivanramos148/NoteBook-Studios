@@ -1,0 +1,9 @@
+<input type="file"><br><br>
+<input #newTitle><br><br>
+<input #newDescription><br><br>
+<button (click)="submitForm(newTitle.value, newDescription.value)">Submit</button>
+<div *ngFor="let gallery of galleries | async">
+  <h1>{{gallery.title}}</h1>
+  <h4>{{gallery.file}}.png</h4>
+  <p>{{gallery.description}}</p>
+</div>
