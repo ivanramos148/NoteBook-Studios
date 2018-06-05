@@ -42,5 +42,4 @@ export class GalleryService {
   getGalleries(){
     return this.galleries;
   }
-
 }

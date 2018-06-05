@@ -1,3 +1,8 @@
-<p>
-  details works!
-</p>
+<img src="{{(galleryPosts | async)?.url}}" width="450" height="450">
+<div class="detailsPost">
+  <h3>{{(galleryPosts | async)?.title}}</h3>
+  <p>{{(galleryPosts | async)?.description}}</p>
+</div>
+<div class="commentSection">
+  <h2>Comments</h2>
+</div>

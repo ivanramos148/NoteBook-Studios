@@ -1,0 +1,10 @@
+div[class="detailsPost"]{
+  margin-top: 10px;
+  float: right;
+}
+div[class="commentSection"]{
+  margin-top: 30px;
+}
+img{
+  margin-top: 10px;
+}
