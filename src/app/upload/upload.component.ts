@@ -19,12 +19,9 @@ export class UploadComponent implements OnInit {
   fileReader(event){
     this.selectedFile = event.target.files[0]
   }
-  submitForm(newTitle: string, newFile: string) {
-    let file = this.selectedFile;
-    this.currentUpload = new Gallery(newTitle, file, newFile)
-    this.galleryServices.pushUpload(this.currentUpload)
-  }
-  removeButton(){
-    $('p').remove()
+  submitForm(newTitle: string, newDescription: string) {
+      let file = this.selectedFile;
+      this.currentUpload = new Gallery(newTitle, file, newDescription)
+      this.galleryServices.pushUpload(this.currentUpload)
   }
 }

@@ -1,6 +1,6 @@
 
 <button type="button" id="fileBtn" class="btn btn-default"><p>Upload File</p></button>
-<input type="file" (change)="fileReader($event)">
+<input type="file" (change)="fileReader($event)" accept="image/*">
 <input #newTitle class='form-control' placeholder="Title">
 <input #newDescription class='form-control' placeholder="Description">
 <button (click)="submitForm(newTitle.value, newDescription.value)" [disabled]="!selectedFile" class="btn btn-default">Submit</button>

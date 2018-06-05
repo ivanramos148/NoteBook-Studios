@@ -3,7 +3,8 @@ div[class="detailsPost"]{
   float: right;
 }
 div[class="commentSection"]{
-  margin-top: 30px;
+  margin-top: 20px;
+  padding-bottom: 40px;
 }
 div[class="userComment"] h4{
   font-size: 1.4em
@@ -11,7 +12,7 @@ div[class="userComment"] h4{
 div[id="inputNbutton"]{
   margin-left: 0px
 }
-input{
+input[id="commentField"]{
   width: 28.5%;
 }
 img{

@@ -42,4 +42,9 @@ export class GalleryService {
   getGalleries(){
     return this.galleries;
   }
+  updateGallery(galleryID){
+    var galleryEntryInFirebase = this.getGalleryById(galleryID.$key);
+    galleryEntryInFirebase.update({title: galleryID.title,
+                                  description: galleryID.description});
+  }
 }

@@ -46,6 +46,6 @@ footer {
   Width: 100%;
   bottom: 0;
 }
-footer p{
+footer[id="mainFooter"]{
  text-align: center
 }

@@ -7,6 +7,7 @@ import { GalleryService } from '../services/gallery.service';
 import { FirebaseObjectObservable } from 'angularfire2/database';
 import { CommentsService } from '../services/comments.service';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+declare var $:any;
 
 @Component({
   selector: 'app-details',
@@ -19,6 +20,8 @@ export class DetailsComponent implements OnInit {
   constructor(private route: ActivatedRoute, private location: Location, private galleryserices: GalleryService, private commentSerices: CommentsService) { }
   galleryId: string;
   comments: any;
+  editGallery = null;
+
   galleryPosts;
   ngOnInit() {
      this.route.params.forEach((urlParameters) => {
@@ -31,8 +34,20 @@ export class DetailsComponent implements OnInit {
       this.comments = dataLastEmittedFromObserver;
     });
    }
-
    addText(commentText: string) {
-    this.commentSerices.addComment((new Comments(commentText)), this.galleryId)
+     if(commentText == ''){
+       alert('please enter text!')
+     } else {
+       this.commentSerices.addComment((new Comments(commentText)), this.galleryId)
+     }
+   }
+   editPost(galleries){
+    this.editGallery = galleries;
+   }
+   updateGallery(currentEdit){
+     this.galleryserices.updateGallery(currentEdit);
+   }
+   DoneEdit(){
+     this.editGallery = null;
    }
 }
