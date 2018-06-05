@@ -12,7 +12,7 @@ import { FirebaseListObservable } from 'angularfire2/database';
 export class UploadComponent {
   selectedFile: FileList;
   galleries: FirebaseListObservable<Gallery[]>;
-
+  currentUpload: Gallery
   constructor(private galleryServices: GalleryService) { }
 
   fileReader(event){
@@ -20,7 +20,7 @@ export class UploadComponent {
   }
   submitForm(newTitle: string, newFile: string) {
     let file = this.selectedFile;
-    let newGalleries: Gallery = new Gallery(newTitle, file, newFile)
-    this.galleryServices.pushUpload(newGalleries)
+    this.currentUpload = new Gallery(newTitle, file, newFile)
+    this.galleryServices.pushUpload(this.currentUpload)
   }
 }

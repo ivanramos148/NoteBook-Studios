@@ -1,0 +1,10 @@
+ div[class="gallery"] {
+    margin: 10px;
+    float: left;
+    width: 250px;
+}
+
+div[class="gallery"] img {
+    width: 100%;
+    height: 240px;
+}

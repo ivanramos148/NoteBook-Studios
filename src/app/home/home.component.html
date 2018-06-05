@@ -1,5 +1,6 @@
-<div *ngFor="let gallery of galleries | async">
-  <h1>{{gallery.title}}</h1>
-  <img src="{{gallery.url}}" width="200" height="225">
-  <p>{{gallery.description}}</p>
+
+<div *ngFor="let gallery of galleries | async" class="gallery">
+  <!-- <h1>{{gallery.title}}</h1> -->
+  <img src="{{gallery.url}}">
+  <!-- <p>{{gallery.description}}</p> -->
 </div>

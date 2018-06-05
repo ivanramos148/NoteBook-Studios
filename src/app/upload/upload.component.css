@@ -5,10 +5,10 @@ input{
 }
 input[type="file"]{
   background-color: blue;
-  width: 22%;
-  margin-bottom: 20px;
-  padding-top: 8px;
-  opacity: 0
+  width: 16.3%;
+  margin-top: 40px;
+  padding-top: 18px;
+  opacity: 0;
 }
 button{
   background-color: #e22d6f;
@@ -17,10 +17,13 @@ button{
 button[id="fileBtn"]{
   margin-top: 2.5em;
   position: absolute;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 button[id="fileBtn"] p{
   line-height: 0px;
-  margin-top: 12px;
+  margin-top: 18px;
   width: 125px
+}
+div[class="bar"]{
+margin-top: 25px
 }
