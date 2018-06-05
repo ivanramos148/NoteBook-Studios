@@ -1,3 +1,9 @@
 export class Gallery {
-  constructor(public title: string, public file: string, public description: string){}
+  $key: string;
+  name:string;
+  url:string;
+  progress:number;
+  createdAt: Date = new Date();
+
+  constructor(public title: string, public file: any, public description: string){}
 }
