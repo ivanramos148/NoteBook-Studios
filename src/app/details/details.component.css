@@ -5,6 +5,22 @@ div[class="detailsPost"]{
 div[class="commentSection"]{
   margin-top: 30px;
 }
+div[class="userComment"] h4{
+  font-size: 1.4em
+}
+div[id="inputNbutton"]{
+  margin-left: 0px
+}
+input{
+  width: 28.5%;
+}
 img{
   margin-top: 10px;
+}
+p{
+  font-family: 'Lato', sans-serif;
+}
+button{
+  background-color: #d8004f;
+  color: white;
 }

@@ -35,7 +35,6 @@ div[id="navbar"] a.active {
   color: white;
 }
 /*end of NAVIGATION BAR */
-/* @media only screen and (min-width: 768px) { */
 .wrap {
   min-height: calc(100vh - 64px);
 }
@@ -47,30 +46,6 @@ footer {
   Width: 100%;
   bottom: 0;
 }
-
-
-/* } */
-/*
-@media only screen and (min-width: 600px){
-  .content {
-    min-height: calc(100vh - 50px);
-  }
-  footer {
-    margin-top: 50px;
-    background-color: #191919;
-    color: white;
-    width: 100%;
-  }
+footer p{
+ text-align: center
 }
-
-@media only screen and (min-width: 860px){
-  .content {
-    min-height: calc(100vh - 150px);
-  }
-  footer {
-    margin-top: 50px;
-    background-color: #191919;
-    color: white;
-    width: 100%;
-  }
-} */

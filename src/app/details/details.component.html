@@ -1,8 +1,20 @@
-<img src="{{(galleryPosts | async)?.url}}" width="450" height="450">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<img src="{{galleryPosts?.url}}" width="450" height="450">
 <div class="detailsPost">
-  <h3>{{(galleryPosts | async)?.title}}</h3>
-  <p>{{(galleryPosts | async)?.description}}</p>
+  <h3>{{galleryPosts?.title}}</h3>
+  <p>{{galleryPosts?.description}}</p>
 </div>
+
+
 <div class="commentSection">
-  <h2>Comments</h2>
+  <div class="row" id="inputNbutton">
+    <input #newCommentText class="form-control">
+    <button (click)="addText(newCommentText.value); newCommentText.value='';" class="btn btn-default">Add Comment</button>
+  </div>
+  <hr>
+  <div *ngFor="let user of comments">
+      <p>User: Unknown</p>
+      <p>{{user?.comentText}}</p>
+    <hr>
+  </div>
 </div>
