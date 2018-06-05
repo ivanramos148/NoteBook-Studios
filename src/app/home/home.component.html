@@ -1,6 +1,10 @@
+<div class="box">
+  <div *ngFor="let gallery of galleries | async" class="gallery">
+    <!-- <h1>{{gallery.title}}</h1> -->
+    <img src="{{gallery.url}}">
+    <!-- <p>{{gallery.description}}</p> -->
+  </div>
+</div>
+<div class="secondbox">
 
-<div *ngFor="let gallery of galleries | async" class="gallery">
-  <!-- <h1>{{gallery.title}}</h1> -->
-  <img src="{{gallery.url}}">
-  <!-- <p>{{gallery.description}}</p> -->
 </div>
