@@ -18,12 +18,4 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.galleries = this.galleryServices.getGalleries()
   }
-  fileReader(event){
-    this.selectedFile = event.target.files[0]
-  }
-  submitForm(newTitle: string, newFile: string) {
-    let file = this.selectedFile;
-    let newGalleries: Gallery = new Gallery(newTitle, file, newFile)
-    this.galleryServices.pushUpload(newGalleries)
-  }
 }

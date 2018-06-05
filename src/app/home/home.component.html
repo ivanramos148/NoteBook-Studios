@@ -1,7 +1,3 @@
-<input type="file" (change)="fileReader($event)"><br><br>
-<input #newTitle><br><br>
-<input #newDescription><br><br>
-<button (click)="submitForm(newTitle.value, newDescription.value)" [disabled]="!selectedFile" class="btn btn-default">Submit</button>
 <div *ngFor="let gallery of galleries | async">
   <h1>{{gallery.title}}</h1>
   <img src="{{gallery.url}}" width="200" height="225">
