@@ -39,9 +39,20 @@ export class GalleryService {
   getGalleryById(galleryId: string){
     return this.database.object(`galleries/${galleryId}`);
   }
+  // original get galleires
   getGalleries(){
     return this.galleries;
   }
+  getGalleriesLimit(postId, offset, startKey?): FirebaseListObservable<any> {
+  return this.database.list(`galleries/`, {
+            query: {
+              orderByKey: true,
+              startAt: startKey,
+              limitToFirst: offset+1
+            }
+          });
+  }
+
   updateGallery(galleryID){
     var galleryEntryInFirebase = this.getGalleryById(galleryID.$key);
     galleryEntryInFirebase.update({title: galleryID.title,

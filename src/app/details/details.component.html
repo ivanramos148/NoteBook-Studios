@@ -23,6 +23,7 @@
   <div *ngFor="let user of comments">
       <p>User: Unknown</p>
       <p>{{user?.comentText}}</p>
+      <button (click)="deleteComment(user)" class="btn btn-default">delete</button>
     <hr>
   </div>
 </div>

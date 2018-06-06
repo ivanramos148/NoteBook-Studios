@@ -1,7 +1,15 @@
-<div class="box">
-  <div *ngFor="let gallery of galleries | async" class="gallery" (click)="goToDetails(gallery)">
-    <img src="{{gallery.url}}">
+
+<body>
+  <div class="box">
+    <div *ngFor="let galleryPost of gallery" class="gallery" (click)="goToDetails(galleryPost)">
+      <img src="{{galleryPost.url}}">
+    </div>
   </div>
-</div>
-<div class="secondbox">
-</div>
+  <div class="nextAndPre">
+    <button (click)="prevPage()" [disabled]="!prevKeys?.length" id="Prev" class="btn btn-default">Prev</button>
+    <button (click)="nextPage()" [disabled]="!nextKey" id="Next" class="btn btn-default">Next</button>
+  </div>
+  <div class="invisible">
+
+  </div>
+</body>

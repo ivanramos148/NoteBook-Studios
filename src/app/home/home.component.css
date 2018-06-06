@@ -1,17 +1,30 @@
  div[class="gallery"] {
-    margin: 10px;
-    float: left;
-    width: 250px;
-    padding-bottom: 80px
+  margin: 10px;
+  float: left;
+  width: 250px;
+  padding-bottom: 30px
 }
 
 div[class="gallery"] img {
-    width: 95%;
-    height: 260px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 4px;
-    cursor: pointer;
+  width: 95%;
+  height: 260px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 4px;
+  cursor: pointer;
 }
 div[class="box"]{
-  margin-top: 50px
+  margin-top: 40px;
+}
+div[class="wrap"]{
+  min-height: 100%;
+}
+div[class="nextAndPre"]{
+  position:absolute;
+  margin-top: 650px
+}
+button[id="Prev"]{
+  margin-left: 10px;
+}
+button[id="Next"]{
+  margin-left: 928px;
 }

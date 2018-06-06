@@ -50,4 +50,9 @@ export class DetailsComponent implements OnInit {
    DoneEdit(){
      this.editGallery = null;
    }
+   deleteComment(comment){
+     if(confirm("Are you sure you want to delete this item from the inventory?")){
+        this.commentSerices.deleteUsercomment(comment, this.galleryId)
+      }
+   }
 }

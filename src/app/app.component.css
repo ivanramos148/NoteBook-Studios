@@ -36,13 +36,12 @@ div[id="navbar"] a.active {
 }
 /*end of NAVIGATION BAR */
 .wrap {
-  min-height: calc(100vh - 64px);
+  min-height: calc(91.9vh);
 }
 footer {
   background-color: #191919;
   color: white;
   padding: 10px;
-  position: fixed;
   Width: 100%;
   bottom: 0;
 }

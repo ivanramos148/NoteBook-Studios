@@ -16,4 +16,8 @@ export class CommentsService {
   getCommentById(galleryId: string) {
     return this.database.list(`/comments/${galleryId}`)
   }
+
+  deleteUsercomment(deleteComment, galleryId){
+   this.database.list(`comments/${galleryId}`).remove(deleteComment);
+  }
 }
