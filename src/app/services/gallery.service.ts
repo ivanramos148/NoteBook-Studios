@@ -58,4 +58,7 @@ export class GalleryService {
     galleryEntryInFirebase.update({title: galleryID.title,
                                   description: galleryID.description});
   }
+  deletePost(deletePost){
+   this.database.list(`galleries/`).remove(deletePost);
+  }
 }

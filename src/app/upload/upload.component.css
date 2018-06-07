@@ -16,7 +16,6 @@ button{
 }
 button[id="fileBtn"]{
   margin-top: 2.5em;
-  position: absolute;
   border-radius: 8px;
 }
 button[id="fileBtn"] p{
@@ -25,5 +24,8 @@ button[id="fileBtn"] p{
   width: 125px
 }
 div[class="bar"]{
-  margin-top: 25px
+  margin-top: 25px;
+}
+div[class="invisible"]{
+  padding-bottom: 479px
 }

@@ -7,6 +7,7 @@ import { GalleryService } from '../services/gallery.service';
 import { FirebaseObjectObservable } from 'angularfire2/database';
 import { CommentsService } from '../services/comments.service';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+import { Router } from '@angular/router';
 declare var $:any;
 
 @Component({
@@ -17,11 +18,10 @@ declare var $:any;
 })
 export class DetailsComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute, private location: Location, private galleryserices: GalleryService, private commentSerices: CommentsService) { }
+  constructor(private routeTo: Router,private route: ActivatedRoute, private location: Location, private galleryserices: GalleryService, private commentSerices: CommentsService) { }
   galleryId: string;
   comments: any;
-  editGallery = null;
-
+  editGallery = null
   galleryPosts;
   ngOnInit() {
      this.route.params.forEach((urlParameters) => {
@@ -42,17 +42,26 @@ export class DetailsComponent implements OnInit {
      }
    }
    editPost(galleries){
+    $('#editPost').fadeIn()
     this.editGallery = galleries;
    }
    updateGallery(currentEdit){
+     alert('your post was updated')
      this.galleryserices.updateGallery(currentEdit);
    }
    DoneEdit(){
-     this.editGallery = null;
+     $('#editPost').fadeOut()
    }
    deleteComment(comment){
-     if(confirm("Are you sure you want to delete this item from the inventory?")){
+     if(confirm("Are you sure yoy want to delete this Comment?")){
         this.commentSerices.deleteUsercomment(comment, this.galleryId)
+      }
+   }
+   deletePost(){
+     if(confirm("Are you sure you want to delete this Post?")){
+       this.routeTo.navigate(['']);
+       this.galleryserices.deletePost(this.galleryId)
+       this.commentSerices.deleteAllComments(this.galleryId)
       }
    }
 }

@@ -18,9 +18,10 @@ div[class="box"]{
 div[class="wrap"]{
   min-height: 100%;
 }
+
 div[class="nextAndPre"]{
   position:absolute;
-  margin-top: 650px
+  margin-top: 930px
 }
 button[id="Prev"]{
   margin-left: 10px;

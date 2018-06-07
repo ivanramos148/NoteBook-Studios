@@ -13,6 +13,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { masterFirebaseConfig } from './services/api-keys';
 import { UploadComponent } from './upload/upload.component';
 import { DetailsComponent } from './details/details.component';
+import { AboutComponent } from './about/about.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -27,6 +28,7 @@ export const firebaseConfig = {
     HomeComponent,
     UploadComponent,
     DetailsComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,

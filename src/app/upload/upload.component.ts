@@ -15,7 +15,11 @@ export class UploadComponent implements OnInit {
   galleries: FirebaseListObservable<Gallery[]>;
   currentUpload: Gallery
   constructor(private galleryServices: GalleryService) { }
-  ngOnInit() {}
+  ngOnInit() {
+  }
+  fileBtn() {
+    $('#filePressed').click()
+  }
   fileReader(event){
     this.selectedFile = event.target.files[0]
   }

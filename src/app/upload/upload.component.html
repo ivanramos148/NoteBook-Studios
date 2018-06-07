@@ -1,6 +1,6 @@
 
-<button type="button" id="fileBtn" class="btn btn-default"><p>Upload File</p></button>
-<input type="file" (change)="fileReader($event)" accept="image/*">
+<button type="button" (click)="fileBtn()" id="fileBtn" class="btn btn-default"><p>Upload File</p></button>
+<input type="file" (change)="fileReader($event)" accept="image/*" id="filePressed">
 <input #newTitle class='form-control' placeholder="Title">
 <input #newDescription class='form-control' placeholder="Description">
 <button (click)="submitForm(newTitle.value, newDescription.value)" [disabled]="!selectedFile" class="btn btn-default">Submit</button>
@@ -9,4 +9,7 @@
     <div class="progress-bar progress-bar-animated" [ngStyle]="{ 'width': currentUpload?.progress + '%' }"></div>
   </div>
     {{currentUpload?.name}} | {{currentUpload?.progress}}% Complete
+</div>
+<div class="invisible">
+
 </div>

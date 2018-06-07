@@ -1,22 +1,44 @@
+div[id="topConent"]{
+  margin-top: 45px;
+}
 div[class="detailsPost"]{
-  margin-top: 10px;
-  float: right;
+  padding:0;
+  margin-left: 100px;
+  right: 0;
+  width: 30%;
+  border: solid 1px black;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
-div[class="commentSection"]{
-  margin-top: 20px;
-  padding-bottom: 40px;
+img{
+  width: 500px;
+  height: 500px;
+  margin-left: 20px;
+  left: 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
+div[class="detailsContent"] h3{
+  text-align: center;
+}
+div[class="detailsContent"] button{
+  margin-left: 115px;
+}
+
 div[class="userComment"] h4{
   font-size: 1.4em
 }
 div[id="inputNbutton"]{
   margin-left: 0px
 }
-input[id="commentField"]{
-  width: 28.5%;
+div[class="commentDiv"]{
+  width: 100%;
+  margin-top: 50px;
 }
-img{
-  margin-top: 10px;
+div[class="commentDiv"] input{
+  width: 34.5%;
+  float:left;
 }
 p{
   font-family: 'Lato', sans-serif;
@@ -24,8 +46,4 @@ p{
 button{
   background-color: #d8004f;
   color: white;
-}
-img{
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 4px;
 }

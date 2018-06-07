@@ -10,14 +10,17 @@ export class CommentsService {
   constructor(private database: AngularFireDatabase) {
     this.comments = database.list('comments');
   }
-  addComment(newComment: Comments, galleryId: string){
-    this.database.list(`comments/${galleryId}`).push(newComment);
-  }
   getCommentById(galleryId: string) {
     return this.database.list(`/comments/${galleryId}`)
   }
-
+  addComment(newComment: Comments, galleryId: string){
+    this.database.list(`comments/${galleryId}`).push(newComment);
+  }
   deleteUsercomment(deleteComment, galleryId){
    this.database.list(`comments/${galleryId}`).remove(deleteComment);
+  }
+  // this code is making sure all is deleted if post is deleted
+  deleteAllComments(galleryId){
+   this.database.list(`comments/${galleryId}`).remove();
   }
 }

@@ -14,7 +14,7 @@ import * as _ from "lodash";
 export class HomeComponent implements OnInit {
   selectedFile: FileList;
   gallery: any
-  offset = 8;
+  offset = 12;
   nextKey: any; // for next button
   prevKeys: any[] = []; // for prev button
   subscription: any;

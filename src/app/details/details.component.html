@@ -1,29 +1,39 @@
-<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-<img src="{{galleryPosts?.url}}" width="450" height="450">
-<div class="detailsPost">
-  <h3>{{galleryPosts?.title}}</h3>
-  <p>{{galleryPosts?.description}}</p>
-  <button (click)="editPost(galleryPosts)" name="button" class="btn btn-default">Edit</button> <br><br>
 
-  <div *ngIf="editGallery">
-    <input [(ngModel)]="editGallery.title" class="form-control"><br>
-    <input [(ngModel)]="editGallery.description" class="form-control"><br>
-    <button (click)="updateGallery(editGallery)" class="btn btn-default">Update</button>
-    <button (click)="DoneEdit()" class="btn btn-default">Done</button>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+  <div class="row" id="topConent">
+    <img src="{{galleryPosts?.url}}" class="image">
+      <div class="overlay" (click)="deletePost(galleryPosts, comments)">
+    </div>
+
+    <div class="detailsPost">
+      <div class="container">
+        <div class="detailsContent">
+          <h3>{{galleryPosts?.title}}</h3>
+          <hr>
+          <p>{{galleryPosts?.description}}</p>
+          <button id="editBtn" (click)="editPost(galleryPosts)" name="button" class="btn btn-default">Edit</button> <br><br>
+        </div>
+        <div *ngIf="editGallery"  id="editPost">
+          <input [(ngModel)]="editGallery.title" class="form-control" maxlength="20"><br>
+          <input [(ngModel)]="editGallery.description" class="form-control"><br>
+          <button (click)="updateGallery(editGallery)" class="btn btn-default">Update</button>
+          <button (click)="DoneEdit()" class="btn btn-default">Done</button>
+          <button (click)="deletePost()" class="btn btn-default">Delete</button>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
 
 
-<div class="commentSection">
-  <div class="row" id="inputNbutton">
-    <input #newCommentText id="commentField" class="form-control">
-    <button (click)="addText(newCommentText.value); newCommentText.value='';" class="btn btn-default">Add Comment</button>
-  </div>
-  <hr>
-  <div *ngFor="let user of comments">
+  <div class="commentDiv">
+    <h4>comments</h4>
+      <input #newCommentText id="commentField" class="form-control">
+      <button (click)="addText(newCommentText.value); newCommentText.value='';" class="btn btn-default">Add Comment</button>
+    <div *ngFor="let user of comments">
       <p>User: Unknown</p>
       <p>{{user?.comentText}}</p>
       <button (click)="deleteComment(user)" class="btn btn-default">delete</button>
-    <hr>
+      <hr>
+    </div>
   </div>
-</div>
