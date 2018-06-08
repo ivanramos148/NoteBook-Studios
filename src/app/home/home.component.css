@@ -2,7 +2,6 @@
   margin: 10px;
   float: left;
   width: 250px;
-
 }
 div[class="gallery"] img {
   width: 95%;
@@ -11,14 +10,36 @@ div[class="gallery"] img {
   border-radius: 4px;
   cursor: pointer;
 }
+div[class="nextAndPre"]{
+
+}
 input{
   opacity: 00;
 }
-@media only screen and (max-width: 1024px) {
-
+@media only screen and (max-width: 768px - min-width: 500px) {
+  div[class="wrap"]{
+    margin-left: 80px
+  }
 }
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 328px) {
+  div[class="gallery"] {
+   margin: 10px;
+   height: 10%;
+   width: 100%;
 
-
-
+ }
+ div[class="wrap"]{
+   margin-right: 20px
+ }
+ div[class="nextAndPre"]{
+   margin-left: 50px
+ }
+}
+@media only screen and (max-width: 414px) {
+  div[class="wrap"]{
+    margin-left: 50px
+  }
+  div[class="nextAndPre"]{
+    margin-left: 50px
+  }
 }

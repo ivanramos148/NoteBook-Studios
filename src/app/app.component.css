@@ -72,42 +72,17 @@ footer {
 #copyright p{
  line-height: 10px;
  margin-top: 10px;
- margin-left: 10px
+ margin-left: 10px;
 }
-@media only screen and (max-width: 1024px) {
-  #copyright{
-    margin-left: 200px;
-  }
-}
-@media only screen and (max-width: 360px) {
-  #copyright{
-    margin-left: 0px;
-    line-height: 10px;
-  }
-  #copyrightText{
-    margin-top: 10px;
-    margin-bottom: 10px
-  }
-  div[class="content"]{
-    padding-left: 40px
-  }
-  footer{
-    width: 100%
-  }
-}
-@media only screen and (max-width: 360px) {
-  #copyright{
-    margin-left: 0px;
-    line-height: 15px;
-  }
-  #copyrightText{
-    margin-top: 15px;
-    margin-bottom: 15px
-  }
-  div[class="content"]{
-    padding-left: 15px
-  }
-  footer{
 
+
+@media only screen and (max-width: 441px) {
+  footer{
+    display: none
+  }
+}
+@media only screen and (max-width: 1300px) {
+  footer{
+    display: none
   }
 }

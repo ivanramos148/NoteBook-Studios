@@ -1,18 +1,14 @@
 
 <body>
 <div class="wrap">
-
-  <!-- <div class="row">
-    <div class="nextAndPre">
-      <button (click)="prevPage()" [disabled]="!prevKeys?.length" id="Prev" class="btn btn-default">Prev</button>
-      <button (click)="nextPage()" [disabled]="!nextKey" id="Next" class="btn btn-default">Next</button>
-    </div>
-  </div> -->
   <div *ngFor="let galleryPost of gallery" class="gallery" (click)="goToDetails(galleryPost)">
     <img src="{{galleryPost.url}}">
-  </div><br><br>
+  </div>
 </div>
-<div class="">
-  <input type="text" name="" value="">
+<div class="nextAndPre">
+  <div class="container">
+    <button (click)="prevPage()" [disabled]="!prevKeys?.length" id="Prev" class="btn btn-default">Prev</button>
+    <button (click)="nextPage()" [disabled]="!nextKey" id="Next" class="btn btn-default">Next</button>
+  </div>
 </div>
 </body>

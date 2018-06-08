@@ -1,26 +1,26 @@
 
 
-  <div class="row" id="topConent"><br>
-    <img src="{{galleryPosts?.url}}" class="image">
-      <div class="overlay" (click)="deletePost(galleryPosts, comments)">
+<img src="{{galleryPosts?.url}}" class="image">
+
+
+
+<div class="detailsPost">
+  <div class="container">
+    <div class="detailsContent">
+      <h3>{{galleryPosts?.title}}</h3>
+      <hr>
+      <p>{{galleryPosts?.description}}</p>
+      <button id="editBtn" (click)="editPost(galleryPosts)" name="button" class="btn btn-default">Edit</button> <br><br>
     </div>
-    <div class="detailsPost">
-      <div class="container">
-        <div class="detailsContent">
-          <h3>{{galleryPosts?.title}}</h3>
-          <hr>
-          <p>{{galleryPosts?.description}}</p>
-          <button id="editBtn" (click)="editPost(galleryPosts)" name="button" class="btn btn-default">Edit</button> <br><br>
-        </div>
-        <div *ngIf="editGallery"  id="editPost">
-          <input [(ngModel)]="editGallery.title" class="form-control" maxlength="20"><br>
-          <input [(ngModel)]="editGallery.description" class="form-control"  maxlength="115"><br>
-          <button (click)="updateGallery(editGallery)" class="btn btn-default">Update</button>
-          <button (click)="deletePost()" class="btn btn-default">Delete</button>
-        </div>
-      </div>
+    <div *ngIf="editGallery"  id="editPost">
+      <input [(ngModel)]="editGallery.title" class="form-control" maxlength="20"><br>
+      <input [(ngModel)]="editGallery.description" class="form-control"  maxlength="115"><br>
+      <button (click)="updateGallery(editGallery)" class="btn btn-default">Update</button>
+      <button (click)="deletePost()" class="btn btn-default">Delete</button>
     </div>
   </div>
+</div>
+
 
 
   <div class="commentDiv">
