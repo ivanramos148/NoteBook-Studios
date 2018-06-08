@@ -11,7 +11,6 @@ header h1{
 }
 div[class="sticky"]{
   position: fixed;
-
   width: 100%;
   top: 0
 }
@@ -51,9 +50,64 @@ footer {
   background-color: #191919;
   color: white;
   padding: 10px;
-  Width: 100%;
-  bottom: 0;
+  position: absolute;
+  width: 100%
 }
-footer[id="mainFooter"]{
- text-align: center
+.social [class*="fa fa-"] {
+    background-color: #FF005E;
+    border-radius: 30px;
+    color: white;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    margin: auto 3px;
+    width: 30px;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+}
+#copyright{
+  margin-left: 290px;
+}
+#copyright p{
+ line-height: 10px;
+ margin-top: 10px;
+ margin-left: 10px
+}
+@media only screen and (max-width: 1024px) {
+  #copyright{
+    margin-left: 200px;
+  }
+}
+@media only screen and (max-width: 360px) {
+  #copyright{
+    margin-left: 0px;
+    line-height: 10px;
+  }
+  #copyrightText{
+    margin-top: 10px;
+    margin-bottom: 10px
+  }
+  div[class="content"]{
+    padding-left: 40px
+  }
+  footer{
+    width: 100%
+  }
+}
+@media only screen and (max-width: 360px) {
+  #copyright{
+    margin-left: 0px;
+    line-height: 15px;
+  }
+  #copyrightText{
+    margin-top: 15px;
+    margin-bottom: 15px
+  }
+  div[class="content"]{
+    padding-left: 15px
+  }
+  footer{
+
+  }
 }

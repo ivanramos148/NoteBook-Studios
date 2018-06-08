@@ -2,9 +2,8 @@
   margin: 10px;
   float: left;
   width: 250px;
-  padding-bottom: 30px
-}
 
+}
 div[class="gallery"] img {
   width: 95%;
   height: 260px;
@@ -12,20 +11,14 @@ div[class="gallery"] img {
   border-radius: 4px;
   cursor: pointer;
 }
-div[class="box"]{
-  margin-top: 40px;
+input{
+  opacity: 00;
 }
-div[class="wrap"]{
-  min-height: 100%;
-}
+@media only screen and (max-width: 1024px) {
 
-div[class="nextAndPre"]{
-  position:absolute;
-  margin-top: 930px
 }
-button[id="Prev"]{
-  margin-left: 10px;
-}
-button[id="Next"]{
-  margin-left: 928px;
+@media only screen and (max-width: 991px) {
+
+
+
 }

@@ -46,11 +46,8 @@ export class DetailsComponent implements OnInit {
     this.editGallery = galleries;
    }
    updateGallery(currentEdit){
-     alert('your post was updated')
-     this.galleryserices.updateGallery(currentEdit);
-   }
-   DoneEdit(){
      $('#editPost').fadeOut()
+     this.galleryserices.updateGallery(currentEdit);
    }
    deleteComment(comment){
      if(confirm("Are you sure yoy want to delete this Comment?")){

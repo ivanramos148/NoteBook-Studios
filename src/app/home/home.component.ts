@@ -13,6 +13,7 @@ import * as _ from "lodash";
 })
 export class HomeComponent implements OnInit {
   selectedFile: FileList;
+  galleries: FirebaseListObservable<Gallery[]>;
   gallery: any
   offset = 12;
   nextKey: any; // for next button
@@ -20,6 +21,7 @@ export class HomeComponent implements OnInit {
   subscription: any;
 
   constructor(private route: Router, private galleryServices: GalleryService) { }
+
 
   ngOnInit() {
     this.getGallery()

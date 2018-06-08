@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title:string = 'app';
-  copyright:string = 'Copyright (c) 2018 Copyright Holder All Rights Reserved.'
+  copyright:string = ''
 }
