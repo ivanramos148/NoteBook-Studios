@@ -1,5 +1,14 @@
 # NotebookStudios
 
+## Details
+  NoteBook studios is a small project that i made for artists all around the world, anyone can post whatever they want and have feedback given to them
+  View at: https://notebook-1de53.firebaseapp.com/
+##Specs
+  * User can currently Upload images and view them in the home page
+  * Each individual upload can view its details page
+  * User can add comments to give feedback to the artist
+  * User can Edit/Delete/Update their post
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
 
 ## Development server
