@@ -3,7 +3,7 @@
 <input type="file" (change)="fileReader($event)" accept="image/*" id="filePressed">
 <input #newTitle class='form-control' placeholder="Title" maxlength="25">
 <input #newDescription class='form-control' placeholder="Description" maxlength="115">
-<button (click)="submitForm(newTitle.value, newDescription.value)" class="btn btn-default" id="submit">Submit</button>
+<button (click)="submitForm(newTitle.value, newDescription.value)" class="btn btn-default" id="submit"  [disabled]="!selectedFile">Submit</button>
 <div *ngIf="currentUpload" class="bar">
   <div class="progress">
     <div class="progress-bar progress-bar-animated" [ngStyle]="{ 'width': currentUpload?.progress + '%' }"></div>
